@@ -1,0 +1,142 @@
+---
+openapi: 3.0.0
+info:
+  title: Wallets
+  description: API кошелька
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080
+    description: localhost
+tags:
+  - name: wallets
+    description: Кошельки
+paths:
+  /api/v1/wallets/:
+    post:
+      tags:
+        - wallets
+      summary: Операция с кошельком
+      description: Операция с кошельком
+      operationId: walletOperation
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                wallet_id:
+                  type: string
+                  format: uuid
+                amount:
+                  type: number
+                  description: сумма
+                  x-oapi-codegen-extra-tags:
+                    validate: gte=0
+                operation_type:
+                  type: string
+                  description: тип операции
+              required:
+                - wallet_id
+                - amount
+                - operation_type
+      responses:
+        "200":
+          description: Успешное получение кошелька
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Wallet'
+        "404":
+          $ref: '#/components/responses/404NotFound'
+        "500":
+          $ref: '#/components/responses/50xError'
+        default:
+          $ref: '#/components/responses/40xError'
+  /api/v1/wallets/{id}/:
+    get:
+      tags:
+        - wallets
+      summary: Получение кошелька
+      description: Получение конкретного кошелька по id
+      operationId: getWalletById
+      parameters:
+        - name: id
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+            format: uuid
+      responses:
+        "200":
+          description: Успешное получение кошелька
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Wallet'
+        "404":
+          $ref: '#/components/responses/404NotFound'
+        "500":
+          $ref: '#/components/responses/50xError'
+        default:
+          $ref: '#/components/responses/40xError'
+
+components:
+  schemas:
+    Wallet:
+      required:
+        - balance
+        - created_at
+      type: object
+      properties:
+        balance:
+          type: number
+        created_at:
+          type: string
+          format: date-time
+      description: Схема предмета
+    ResponseError:
+      required:
+        - detail
+      properties:
+        detail:
+          type: string
+          description: Описание ошибки
+          example: Произошла неизвестная ошибка
+
+  responses:
+    "404NotFound":
+      description: Не найдено
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ResponseError'
+          examples:
+            NotFound:
+              summary: Не найдено
+              value:
+                detail: Не найдено
+    "40xError":
+      description: Ошибка во время выполнения запроса
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ResponseError'
+          examples:
+            Error:
+              summary: Ошибка во время выполнения запроса
+              value:
+                detail: Ошибка во время выполнения запроса
+    "50xError":
+      description: Ошибка сервера
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ResponseError'
+          examples:
+            Error:
+              summary: Ошибка во время выполнения запроса
+              value:
+                detail: Ошибка во время выполнения запроса

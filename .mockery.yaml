@@ -1,0 +1,15 @@
+all: false
+dir: '{{.InterfaceDir}}'
+filename: mocks.go
+force-file-write: false
+formatter: goimports
+log-level: info
+structname: '{{.Mock}}{{.InterfaceName}}'
+pkgname: '{{.SrcPackageName}}'
+recursive: false
+template: testify
+packages:
+  github.com/SergeiGD/itk_test/internal/adapter/sql/wallets:
+    interfaces:
+      WalletsRepository:
+
