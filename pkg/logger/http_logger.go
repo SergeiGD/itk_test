@@ -5,7 +5,7 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/SergeiGD/itk_test/config"
+	"github.com/SergeiGD/golang-template/config"
 	"github.com/sirupsen/logrus"
 )
 

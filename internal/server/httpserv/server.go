@@ -3,10 +3,10 @@ package httpserv
 import (
 	"context"
 
-	"github.com/SergeiGD/itk_test/config"
-	http2 "github.com/SergeiGD/itk_test/internal/api/http"
-	"github.com/SergeiGD/itk_test/internal/di"
-	"github.com/SergeiGD/itk_test/pkg/logger"
+	"github.com/SergeiGD/golang-template/config"
+	http2 "github.com/SergeiGD/golang-template/internal/api/http"
+	"github.com/SergeiGD/golang-template/internal/di"
+	"github.com/SergeiGD/golang-template/pkg/logger"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"

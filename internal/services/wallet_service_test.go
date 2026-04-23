@@ -5,9 +5,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/SergeiGD/itk_test/internal/adapter/sql/wallets"
-	"github.com/SergeiGD/itk_test/internal/models"
-	"github.com/SergeiGD/itk_test/pkg/logger"
+	"github.com/SergeiGD/golang-template/internal/adapter/sql/wallets"
+	"github.com/SergeiGD/golang-template/internal/models"
+	"github.com/SergeiGD/golang-template/pkg/logger"
 	"github.com/google/uuid"
 	"github.com/shopspring/decimal"
 	"github.com/stretchr/testify/assert"

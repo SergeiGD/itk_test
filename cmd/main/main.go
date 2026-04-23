@@ -7,10 +7,10 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/SergeiGD/itk_test/config"
-	"github.com/SergeiGD/itk_test/internal/app"
-	"github.com/SergeiGD/itk_test/internal/server/httpserv"
-	"github.com/SergeiGD/itk_test/pkg/logger"
+	"github.com/SergeiGD/golang-template/config"
+	"github.com/SergeiGD/golang-template/internal/app"
+	"github.com/SergeiGD/golang-template/internal/server/httpserv"
+	"github.com/SergeiGD/golang-template/pkg/logger"
 	"github.com/ilyakaznacheev/cleanenv"
 	"golang.org/x/sync/errgroup"
 )

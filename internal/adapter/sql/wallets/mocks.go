@@ -7,7 +7,7 @@ package wallets
 import (
 	"context"
 
-	"github.com/SergeiGD/itk_test/internal/models"
+	"github.com/SergeiGD/golang-template/internal/models"
 	"github.com/google/uuid"
 	"github.com/shopspring/decimal"
 	mock "github.com/stretchr/testify/mock"

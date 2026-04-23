@@ -9,7 +9,7 @@ pkgname: '{{.SrcPackageName}}'
 recursive: false
 template: testify
 packages:
-  github.com/SergeiGD/itk_test/internal/adapter/sql/wallets:
+  github.com/SergeiGD/golang-template/internal/adapter/sql/wallets:
     interfaces:
       WalletsRepository:
 

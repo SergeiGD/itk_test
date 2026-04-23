@@ -4,8 +4,8 @@ import (
 	"context"
 	"errors"
 
-	"github.com/SergeiGD/itk_test/internal/usecases"
-	"github.com/SergeiGD/itk_test/pkg/logger"
+	"github.com/SergeiGD/golang-template/internal/usecases"
+	"github.com/SergeiGD/golang-template/pkg/logger"
 	"github.com/go-playground/validator/v10"
 	"github.com/sirupsen/logrus"
 )

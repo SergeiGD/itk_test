@@ -4,9 +4,9 @@ import (
 	"context"
 	"errors"
 
-	"github.com/SergeiGD/itk_test/internal/models"
-	"github.com/SergeiGD/itk_test/internal/services"
-	"github.com/SergeiGD/itk_test/pkg/logger"
+	"github.com/SergeiGD/golang-template/internal/models"
+	"github.com/SergeiGD/golang-template/internal/services"
+	"github.com/SergeiGD/golang-template/pkg/logger"
 	"github.com/google/uuid"
 	"github.com/shopspring/decimal"
 )

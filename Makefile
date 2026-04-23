@@ -10,7 +10,7 @@ codegen-mocks:
 	mockery
 
 codegen-di:
-	wire github.com/SergeiGD/itk_test/internal/di
+	wire github.com/SergeiGD/golang-template/internal/di
 
 tests:
 	go test -count=1 ./...

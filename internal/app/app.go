@@ -1,8 +1,8 @@
 package app
 
 import (
-	"github.com/SergeiGD/itk_test/config"
-	"github.com/SergeiGD/itk_test/internal/server"
+	"github.com/SergeiGD/golang-template/config"
+	"github.com/SergeiGD/golang-template/internal/server"
 )
 
 type App struct {

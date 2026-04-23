@@ -3,12 +3,12 @@ package di
 import (
 	"context"
 
-	"github.com/SergeiGD/itk_test/config"
-	"github.com/SergeiGD/itk_test/internal/adapter/sql/wallets"
-	"github.com/SergeiGD/itk_test/internal/services"
-	"github.com/SergeiGD/itk_test/internal/usecases"
-	"github.com/SergeiGD/itk_test/pkg/logger"
-	"github.com/SergeiGD/itk_test/pkg/postgres"
+	"github.com/SergeiGD/golang-template/config"
+	"github.com/SergeiGD/golang-template/internal/adapter/sql/wallets"
+	"github.com/SergeiGD/golang-template/internal/services"
+	"github.com/SergeiGD/golang-template/internal/usecases"
+	"github.com/SergeiGD/golang-template/pkg/logger"
+	"github.com/SergeiGD/golang-template/pkg/postgres"
 )
 
 func ProvideWalletsRepository(cfg config.Config, logger *logger.Logger) (wallets.WalletsRepository, error) {

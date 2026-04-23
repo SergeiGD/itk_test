@@ -3,9 +3,9 @@ package wallets
 import (
 	"context"
 
-	"github.com/SergeiGD/itk_test/internal/models"
-	"github.com/SergeiGD/itk_test/pkg/logger"
-	"github.com/SergeiGD/itk_test/pkg/postgres"
+	"github.com/SergeiGD/golang-template/internal/models"
+	"github.com/SergeiGD/golang-template/pkg/logger"
+	"github.com/SergeiGD/golang-template/pkg/postgres"
 	"github.com/google/uuid"
 	"github.com/shopspring/decimal"
 )

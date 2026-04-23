@@ -4,7 +4,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/SergeiGD/itk_test/config"
+	"github.com/SergeiGD/golang-template/config"
 	"github.com/google/uuid"
 	"golang.org/x/time/rate"
 )

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/SergeiGD/itk_test/config"
+	"github.com/SergeiGD/golang-template/config"
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgconn"
 	"github.com/jackc/pgx/v5/pgxpool"

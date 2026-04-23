@@ -1,4 +1,4 @@
-module github.com/SergeiGD/itk_test
+module github.com/SergeiGD/golang-template
 
 go 1.25.0
 
